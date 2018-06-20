@@ -1,8 +1,9 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
-
+mainClassName = "Main"
 sourceCompatibility = 1.8
 
 repositories {
