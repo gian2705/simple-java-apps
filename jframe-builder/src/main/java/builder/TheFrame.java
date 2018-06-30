@@ -10,7 +10,7 @@ public class TheFrame extends JFrame  {
   private boolean makeResizable;
   private boolean isUndecorated;
 
-  protected TheFrame(Builder builder){
+  private TheFrame(Builder builder){
     this.isUndecorated=builder.isUndecorated;
     this.frameName = builder.frameName;
     this.frameWidth = builder.frameWidth;
@@ -89,7 +89,17 @@ public class TheFrame extends JFrame  {
     return makeResizable;
   }
 
-  public boolean isUdecorated() {
+  public boolean isUndecorated() {
     return isUndecorated;
+  }
+
+
+  /**
+   * This method prints the frame details in the form as shown here
+   * [FrameName, FrameHeight,FrameWidth,IsFrameResizable,IsFrameUndecorated]
+   * [String, int, int, boolean, boolean]
+   */
+  public void printDetails(){
+    System.out.println("["+frameName+ ","+frameHeight+","+frameWidth+","+makeResizable+","+isUndecorated+"]");
   }
 }
