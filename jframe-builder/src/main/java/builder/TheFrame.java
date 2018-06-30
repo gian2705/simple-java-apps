@@ -2,7 +2,7 @@ package builder;
 
 import javax.swing.*;
 
-public class TheFrame extends JFrame implements FrameFactory {
+public class TheFrame extends JFrame  {
 
   private String frameName;
   private int frameWidth;
@@ -16,37 +16,11 @@ public class TheFrame extends JFrame implements FrameFactory {
     this.frameWidth = builder.frameWidth;
     this.frameHeight = builder.frameHeight;
     this.makeResizable = builder.makeResizable;
-
-    builder.frameLayout();
-    initComponents();
-    addComponents();
-    registerListeners();
     setFrame();
 
   }
 
-
-/*  public void frameLayout() {
-    System.out.println("frameLayout() From Superclass");
-  }*/
-
-  @Override
-  public void initComponents() {
-    System.out.println("initComponents() From Superclass");
-  }
-
-  @Override
-  public void addComponents() {
-    System.out.println("addComponents() from Superclass");
-  }
-
-  @Override
-  public void registerListeners() {
-    System.out.println("registerListeners() From SuperClass");
-  }
-
-  @Override
-  public void setFrame() {
+  private void setFrame() {
     setTitle(frameName);
     setSize(frameWidth,frameHeight);
     setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -68,9 +42,6 @@ public class TheFrame extends JFrame implements FrameFactory {
 
     }
 
-    public void frameLayout() {
-      System.out.println("frameLayout() From Superclass");
-    }
 
     public Builder frameName(String frameName){
       this.frameName=frameName;

@@ -1,11 +1,9 @@
 import builder.TheFrame;
 
-public class Demo extends TheFrame {
-  private Demo(Builder builder) {
-    super(builder);
-  }
+public class Demo{
 
   public static void main(String[] args) {
-    new Demo.Builder().build().setVisible(true);
+
+      new TheFrame.Builder().build().setVisible(true);
   }
 }
