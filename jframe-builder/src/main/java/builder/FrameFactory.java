@@ -5,5 +5,4 @@ public interface FrameFactory {
   void initComponents();
   void addComponents();
   void registerListeners();
-  void setFrame();
 }
