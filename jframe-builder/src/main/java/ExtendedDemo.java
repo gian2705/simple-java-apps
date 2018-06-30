@@ -1,21 +1,14 @@
 import builder.TheFrame;
 
-public class ExtendedDemo extends TheFrame{
+public class ExtendedDemo{
 
-
-  private ExtendedDemo(Builder builder) {
-    super(builder);
-
-  }
 
   public static void main(String[] args) {
-    new ExtendedDemo.Builder().
-            frameName("Extended Demo").
-            frameHeight(300).
-            frameWidth(450).
-            makeResizable(false).
-            build().setVisible(true);
-
+    new TheFrame.Builder()
+            .frameName("Extended Demo")
+            .frameHeight(400)
+            .frameWidth(600)
+            .build().setVisible(true);
   }
 
 }
