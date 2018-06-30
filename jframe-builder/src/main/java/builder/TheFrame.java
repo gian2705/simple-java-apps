@@ -16,31 +16,33 @@ public class TheFrame extends JFrame implements FrameFactory {
     this.frameWidth = builder.frameWidth;
     this.frameHeight = builder.frameHeight;
     this.makeResizable = builder.makeResizable;
-    frameLayout();
+
+    builder.frameLayout();
     initComponents();
     addComponents();
     registerListeners();
     setFrame();
-  }
-
-  @Override
-  public void frameLayout() {
 
   }
+
+
+/*  public void frameLayout() {
+    System.out.println("frameLayout() From Superclass");
+  }*/
 
   @Override
   public void initComponents() {
-
+    System.out.println("initComponents() From Superclass");
   }
 
   @Override
   public void addComponents() {
-
+    System.out.println("addComponents() from Superclass");
   }
 
   @Override
   public void registerListeners() {
-
+    System.out.println("registerListeners() From SuperClass");
   }
 
   @Override
@@ -54,9 +56,6 @@ public class TheFrame extends JFrame implements FrameFactory {
     setVisible(true);
   }
 
-  private void makeDraggable(boolean isDraggable){
-    this.setUndecorated(false);
-  }
 
   public static class Builder{
     private String frameName="";
@@ -66,6 +65,11 @@ public class TheFrame extends JFrame implements FrameFactory {
     private boolean isUndecorated=false;
 
     public Builder() {
+
+    }
+
+    public void frameLayout() {
+      System.out.println("frameLayout() From Superclass");
     }
 
     public Builder frameName(String frameName){
@@ -93,6 +97,7 @@ public class TheFrame extends JFrame implements FrameFactory {
     }
 
     public TheFrame build(){
+
       return new TheFrame(this);
     }
   }///end of Builder class
