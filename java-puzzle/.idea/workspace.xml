@@ -55,14 +55,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TheUserInterface.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TheUserInterface.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ui/TheUserInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="504">
+              <caret line="393" lean-forward="true" selection-start-line="393" selection-end-line="393" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#924#925#0" expanded="true" />
                 <element signature="e#952#953#0" expanded="true" />
+                <element signature="e#9604#9605#0" expanded="true" />
+                <element signature="e#9648#9649#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ButtonSize.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ButtonSize.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ui/ButtonSize.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            <state relative-caret-position="225">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -94,6 +97,16 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>SIZE</find>
+      <find>buttons</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>getGameSize()</replace>
+      <replace>btnImages</replace>
+    </replaceStrings>
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -397,8 +410,8 @@
         <option value="$PROJECT_DIR$/src/main/java/utils/RandomNumberGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/ui/LevelChooser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ui/TheUserInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/ui/ButtonSize.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ui/TheUserInterface.java" />
       </list>
     </option>
   </component>
@@ -470,15 +483,6 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java-puzzle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java-puzzle" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="level4" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -586,39 +590,41 @@
       <workItem from="1530524180961" duration="562000" />
       <workItem from="1531836316660" duration="7010000" />
       <workItem from="1531844025616" duration="2595000" />
-      <workItem from="1531847997378" duration="1903000" />
+      <workItem from="1531847997378" duration="3333000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12881000" />
+    <option name="totallyTimeSpent" value="14311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32962137" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32962137" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.9164811" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26927784" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26927784" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Learn" order="2" />
       <window_info anchor="right" id="Gradle" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -626,7 +632,6 @@
       <window_info anchor="bottom" id="Build" order="7" weight="0.32962137" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,6 +679,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#924#925#0" expanded="true" />
             <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#9604#9605#0" expanded="true" />
+            <element signature="e#9648#9649#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -744,6 +751,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#924#925#0" expanded="true" />
             <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#9604#9605#0" expanded="true" />
+            <element signature="e#9648#9649#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -828,16 +837,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="216" selection-start-line="216" selection-end-line="216" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ui/TheUserInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#6758#6759#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -847,8 +848,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ui/ButtonSize.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="225">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/TheUserInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="393" lean-forward="true" selection-start-line="393" selection-end-line="393" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#9604#9605#0" expanded="true" />
+            <element signature="e#9648#9649#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
