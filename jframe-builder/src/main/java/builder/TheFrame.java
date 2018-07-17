@@ -1,8 +1,12 @@
 package builder;
 
 import javax.swing.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class TheFrame extends JFrame  {
+
+  int pX,pY;
 
   private String frameName;
   private int frameWidth;
@@ -20,9 +24,24 @@ public class TheFrame extends JFrame  {
 
   }
 
+
   private void setFrame() {
     setTitle(frameName);
     setSize(frameWidth,frameHeight);
+    addMouseListener(new MouseAdapter() {
+      @Override
+      public void mousePressed(MouseEvent e) {
+        pX= getX();
+        pY= getY();
+      }
+    });
+
+    addMouseMotionListener(new MouseAdapter() {
+      @Override
+      public void mouseDragged(MouseEvent e) {
+        setLocation(getLocation().x+getX()-pX, getLocation().y+getY()-pY);
+      }
+    });
     setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     setLocationRelativeTo(null);
     setUndecorated(isUndecorated);
@@ -91,6 +110,11 @@ public class TheFrame extends JFrame  {
 
   public boolean isUndecorated() {
     return isUndecorated;
+  }
+
+
+  public TheFrame getFrame(){
+    return this;
   }
 
 

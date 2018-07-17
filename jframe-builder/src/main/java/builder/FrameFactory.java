@@ -1,8 +1,9 @@
 package builder;
 
 public interface FrameFactory {
-
-  void initComponents();
-  void addComponents();
-  void registerListeners();
+  TheFrame makeFrame();
+  void  theLayout(TheFrame theFrame);
+  void initComponents(TheFrame theFrame);
+  void addComponents(TheFrame theFrame);
+  void registerListeners(TheFrame theFrame);
 }
