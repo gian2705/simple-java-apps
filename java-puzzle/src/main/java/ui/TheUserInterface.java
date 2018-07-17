@@ -36,12 +36,9 @@ public class TheUserInterface extends JFrame implements ActionListener {
     }
   }
 
-  public int getBUTTON_SIZE() {
+  private int getBUTTON_SIZE() {
     return BUTTON_SIZE;
   }
-
-  //TODO: Game will be 9,16 or 25 pieces of the puzzle
-  //TODO: Size can take number 3 ,4 or 5
 
   private int gameSize;
 
@@ -49,13 +46,13 @@ public class TheUserInterface extends JFrame implements ActionListener {
    * Getter Method For Game Size (Game Level)
    * @return (int) the game level
    */
-  public int getGameSize() {
+  private int getGameSize() {
     return gameSize;
   }
 
-  public void setGameSize(int gameSize) {
-    this.gameSize = gameSize;
-  }
+ // public void setGameSize(int gameSize) {
+ //   this.gameSize = gameSize;
+//  }
 
   private Index2D keyIndex;
 
@@ -108,11 +105,10 @@ public class TheUserInterface extends JFrame implements ActionListener {
 
   /**
    *
-   * @param level Game Level
    * @return ArrayList of Icons to be used in a particular game level
    */
 
-  private ArrayList<ImageIcon> imageIcons(int level){
+  private ArrayList<ImageIcon> imageIcons(){
     ArrayList<ImageIcon> icons
             = new ArrayList<>();
 
@@ -124,7 +120,7 @@ public class TheUserInterface extends JFrame implements ActionListener {
   }
 
 
-  public TheUserInterface(int gameSize) {
+  TheUserInterface(int gameSize) {
     this.gameSize=gameSize;
 
     classLoader = Thread.currentThread().getContextClassLoader();
@@ -132,7 +128,7 @@ public class TheUserInterface extends JFrame implements ActionListener {
 
     setUrls(imagesUrls(getGameSize()));
     //getUrls().forEach(url -> System.out.println(url));
-    setIcons(imageIcons(getGameSize()));
+    setIcons(imageIcons());
 
     btnImages = new JButton[getGameSize()][getGameSize()];
 
