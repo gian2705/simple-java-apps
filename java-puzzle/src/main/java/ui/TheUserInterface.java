@@ -15,6 +15,8 @@ import java.util.Optional;
 
 public class TheUserInterface extends JFrame implements ActionListener {
 
+  private JLabel lbFullImage;
+
   private ArrayList<ImageIcon> icons;
   private ArrayList<URL> urls;
 
@@ -133,10 +135,14 @@ public class TheUserInterface extends JFrame implements ActionListener {
     btnImages = new JButton[getGameSize()][getGameSize()];
 
     setLayout(null);
+    initComponents();
+    addButtons();
+    /*
     Runnable initComponentsThread = this::initComponents;
     Runnable addButtonsThread = this::addButtons;
     initComponentsThread.run();
     addButtonsThread.run();
+    */
 
     registerButtonsListener();
 
@@ -181,7 +187,16 @@ public class TheUserInterface extends JFrame implements ActionListener {
       }
     }
 
-    //lbFullImage = new JLabel(new ImageIcon(Objects.requireNonNull(classLoader.getResource("img/waalove.jpeg"))));
+    System.out.println("img/level"+getGameSize()+"/full"+getGameSize()+".jpeg");
+
+    try {
+      lbFullImage = new JLabel(new ImageIcon(Objects.requireNonNull(classLoader.getResource("img/level" + getGameSize() + "/full" + getGameSize() + ".jpeg"))));
+    }catch (NullPointerException npe){
+      npe.getCause();
+      npe.printStackTrace();
+    }
+
+
 }
 
   private void addButtons() {
@@ -201,10 +216,10 @@ public class TheUserInterface extends JFrame implements ActionListener {
       y_pos+=getBUTTON_SIZE()+BUTTON_SPACE;
     }
 
-    //int x = SIZE*(BUTTON_SIZE*BUTTON_SPACE)-BUTTON_SPACE+10;
+    int x = getGameSize()*(BUTTON_SIZE*BUTTON_SPACE)-BUTTON_SPACE+10;
 
-   // lbFullImage.setBounds(x,2,400,400);
-   // add(lbFullImage);
+     lbFullImage.setBounds(x,2,400,400);
+     add(lbFullImage);
 
 
   }
@@ -218,14 +233,14 @@ public class TheUserInterface extends JFrame implements ActionListener {
         btnImages[i][j].addActionListener(this);
       }
     }
-
   }
 
   private void setTheFrame() {
     setTitle("The PuzzleX");
-    setSize(getGameSize()*(BUTTON_SPACE+getBUTTON_SIZE()),getGameSize()*(BUTTON_SPACE+getBUTTON_SIZE())+38);
+    setSize(getGameSize()*(BUTTON_SPACE+getBUTTON_SIZE())*2,getGameSize()*(BUTTON_SPACE+getBUTTON_SIZE())+38);
     setLocationRelativeTo(null);
     setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    setResizable(false);
     setVisible(true);
   }
 
@@ -291,13 +306,21 @@ public class TheUserInterface extends JFrame implements ActionListener {
       if(isGameComplete()){
         System.out.println("[COMPLETE]");
 
-        btnImages[getGameSize()-1][getGameSize()-1].setIcon(new ImageIcon(Objects.requireNonNull(classLoader.getResource("img/row-4-col-4.jpg"))));
-        //Freeze Neighbours
-        //int x=getGameSize()-1;
-        //int x1 = x-2;
-        btnImages[2][3].setEnabled(false);
-        btnImages[3][2].setEnabled(false);
-        showGameOver();
+       try{
+         btnImages[getGameSize()-1][getGameSize()-1]
+                 .setIcon(new ImageIcon(
+                         Objects.requireNonNull(
+                                 classLoader.getResource(
+                                         "img/level"+getGameSize()+"/row-"+getGameSize()+"-col-"+getGameSize()+".jpg"))));
+       }catch (NullPointerException npe){
+         System.out.println("[ERROR]--> Image is Not Found");
+       }
+        finally{
+          //btnImages[getGameSize()-2][getGameSize()-1].setEnabled(false);
+          //btnImages[getGameSize()-1][getGameSize()-2].setEnabled(false);
+          showGameOver();
+        }
+
       }else{
         System.out.println("[NOT COMPLETE]");
       }
