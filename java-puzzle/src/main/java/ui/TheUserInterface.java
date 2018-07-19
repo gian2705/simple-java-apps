@@ -15,6 +15,8 @@ import java.util.Optional;
 
 public class TheUserInterface extends JFrame implements ActionListener {
 
+  private ProgressMonitor progressMonitor;
+
   private JLabel lbFullImage;
 
   private ArrayList<ImageIcon> icons;
@@ -135,14 +137,11 @@ public class TheUserInterface extends JFrame implements ActionListener {
     btnImages = new JButton[getGameSize()][getGameSize()];
 
     setLayout(null);
-    initComponents();
-    addButtons();
-    /*
+
     Runnable initComponentsThread = this::initComponents;
     Runnable addButtonsThread = this::addButtons;
     initComponentsThread.run();
     addButtonsThread.run();
-    */
 
     registerButtonsListener();
 
@@ -150,6 +149,8 @@ public class TheUserInterface extends JFrame implements ActionListener {
   }
 
   private void initComponents() {
+
+    progressMonitor = new ProgressMonitor();
 
     RandomNumberGenerator rng =
             new RandomNumberGenerator();
@@ -178,11 +179,9 @@ public class TheUserInterface extends JFrame implements ActionListener {
         btnImages[i][j] = new JButton(getIcons().get(randomInts.get(value)));
 
         /*SAFE MODE
-
-
         Uncomment this piece of code if You Want To Launch The game with all pieces
-        correctly arranged. Before That You Should Comment lines 126 t0 133*/
-        //btnImages[i][j] = new JButton(getIcons().get(value));
+        correctly arranged. Before That You Should Comment lines */
+       // btnImages[i][j] = new JButton(getIcons().get(value));
 
       }
     }
