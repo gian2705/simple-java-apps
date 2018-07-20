@@ -13,7 +13,6 @@ public class RandomNumberGenerator {
 
 
   /**
-   *
    * @return the limit set for RandomNumberGenerator
    */
   private int getLimit() {

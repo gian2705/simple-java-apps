@@ -36,6 +36,9 @@ public class LevelChooser extends JFrame implements ActionListener {
     setTheFrame();
   }
 
+  /**
+   * This method initializes all the components to be added to the JFrame
+   */
   private void initComponents(){
     pnl=new JPanel(new GridLayout(1,0));
     btnPlay=new JButton(playCommand);
@@ -50,6 +53,10 @@ public class LevelChooser extends JFrame implements ActionListener {
   }
 
 
+  /**
+   * This methods add the components initialized in <code/>initComponents<code/>
+   * into the JFrame
+   */
   private void addComponents(){
     buttonGroup.add(rbLevelOne);
     buttonGroup.add(rbLevelTwo);
@@ -61,7 +68,9 @@ public class LevelChooser extends JFrame implements ActionListener {
     pnl.add(btnPlay);
   }
 
-
+  /**
+   * This method sets the basic JFrame attributes like size,title
+   */
   private void setTheFrame(){
 
     add(pnl);
@@ -73,6 +82,9 @@ public class LevelChooser extends JFrame implements ActionListener {
     setVisible(true);
   }
 
+  /**
+   * Registering the action listener
+   */
   private void registerListenerForButtons(){
     rbLevelTwo.addActionListener(this);
     rbLevelOne.addActionListener(this);

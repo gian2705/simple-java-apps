@@ -3,6 +3,9 @@ package utils;
 import java.util.ArrayList;
 
 /**
+ * This class is intended to represent a Point,p as a cartesian coordinate
+ * with x-coordinate and y-coordinate. P(x,y) a point P is assumed to be in
+ * a n by n matrix or to put it in simple way a 2D array
  * @author iampius
  */
 
@@ -18,10 +21,18 @@ public class Index2D {
     this.yIndex = yIndex;
   }
 
+  /**
+   * @return xIndex value of Index2D Object
+   */
   public int getXIndex() {
     return xIndex;
   }
 
+
+  /**
+   *
+   * @param xIndex the XIndex value to be set
+   */
   public void setXIndex(int xIndex) {
     this.xIndex = xIndex;
   }

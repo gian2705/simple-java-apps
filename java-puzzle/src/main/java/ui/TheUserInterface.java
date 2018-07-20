@@ -15,10 +15,6 @@ import java.util.Optional;
 
 public class TheUserInterface extends JFrame implements ActionListener {
 
-
-
-  //private ProgressMonitor progressMonitor;
-
   private JLabel lbFullImage;
 
   private ArrayList<ImageIcon> icons;
@@ -127,11 +123,11 @@ public class TheUserInterface extends JFrame implements ActionListener {
 
   private boolean isGameOver;
 
-  public boolean isGameOver() {
+  private boolean isGameOver() {
     return isGameOver;
   }
 
-  public void setGameOver(boolean gameOver) {
+  private void setGameOver(boolean gameOver) {
     isGameOver = gameOver;
   }
 
@@ -160,8 +156,6 @@ public class TheUserInterface extends JFrame implements ActionListener {
   }
 
   private void initComponents() {
-
-    //progressMonitor = new ProgressMonitor();
 
     RandomNumberGenerator rng =
             new RandomNumberGenerator();
