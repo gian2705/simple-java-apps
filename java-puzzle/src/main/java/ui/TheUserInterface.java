@@ -15,7 +15,9 @@ import java.util.Optional;
 
 public class TheUserInterface extends JFrame implements ActionListener {
 
-  private ProgressMonitor progressMonitor;
+
+
+  //private ProgressMonitor progressMonitor;
 
   private JLabel lbFullImage;
 
@@ -123,6 +125,15 @@ public class TheUserInterface extends JFrame implements ActionListener {
     return icons;
   }
 
+  private boolean isGameOver;
+
+  public boolean isGameOver() {
+    return isGameOver;
+  }
+
+  public void setGameOver(boolean gameOver) {
+    isGameOver = gameOver;
+  }
 
   TheUserInterface(int gameSize) {
     this.gameSize=gameSize;
@@ -150,7 +161,7 @@ public class TheUserInterface extends JFrame implements ActionListener {
 
   private void initComponents() {
 
-    progressMonitor = new ProgressMonitor();
+    //progressMonitor = new ProgressMonitor();
 
     RandomNumberGenerator rng =
             new RandomNumberGenerator();
@@ -279,7 +290,7 @@ public class TheUserInterface extends JFrame implements ActionListener {
         Index of the key is then updated.
        */
 
-      if(theKey!=null){
+      if(theKey!=null && !isGameOver){
         new Index2D().printIndex(theKey);
         JButton b = (JButton) e.getSource();
         ImageIcon tempIcon = (ImageIcon) b.getIcon();
@@ -335,7 +346,7 @@ public class TheUserInterface extends JFrame implements ActionListener {
 
   private boolean isGameComplete(){
 
-    boolean a= true;
+    setGameOver(true);
 
     int _1DIndex;
     for (int i = 0; i <getGameSize(); i++) {
@@ -350,12 +361,12 @@ public class TheUserInterface extends JFrame implements ActionListener {
         }
 
         if(!(icn.equals(icn2))){
-          a=false;
+          setGameOver(false);
         }
 
       }
     }
-    return a;
+    return isGameOver();
   }
 
   /**
